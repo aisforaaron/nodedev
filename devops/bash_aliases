@@ -1,0 +1,6 @@
+startForeverProcess() {
+  # start forever and point to $1 first arg passed 
+  # app.log already created during VM provision
+  forever start -l app.log -a -c 'nodemon -L' $1
+}
+alias startfs=startForeverProcess
